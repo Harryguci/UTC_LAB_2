@@ -1,12 +1,4 @@
-﻿@section Scripts{
-    <script>
-        var table = document.querySelector("table");
-        table.onclick = function onTableClick() {
-            table.style = "background-color: yellow;"
-        }
-    </script>
-}
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -41,11 +33,13 @@
                 <partial name="Footer" />
             </footer>
             <!-- End Footer -->
+            <div class="after-footer">
+                @RenderSection("AfterFooter", required: false)
+            </div>
         </div>
         <!-- End Right content -->
     </div>
     <script src="~/external/js/scripts.js"></script>
-
-    @RenderSection("Scripts", required:false);
+    @RenderSection("Scripts", required: false);
 </body>
 </html>

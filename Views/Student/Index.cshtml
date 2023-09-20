@@ -3,6 +3,15 @@
     Layout = "MyLayoutHelper";
 }
 
+@section Scripts{
+    <script>
+        var table = document.querySelector("table");
+        table.onclick = function onTableClick() {
+            table.style = "background-color: yellow;"
+        }
+    </script>
+}
+
 <main>
     <div class="container-fluid px-4">
         <h1 class="mt-4">Dashboard</h1>
